@@ -1,2 +1,2 @@
-# RN FIrebase Starter
- RN FIrebase Starter
+# RN Firebasestarter
+ React Native Firebase starter
