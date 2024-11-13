@@ -115,6 +115,16 @@ npx react-native run-ios
 - **Login**: The `LoginScreen` in `src/screens/auth/Login` allows users to sign in with a phone number and OTP.
 - **Home**: After logging in, users are navigated to the `HomeScreen` in `src/screens/dashboard/home`, where they can see a welcome message and use the `Logout` button to sign out.
 
+
+## TODO
+ Add User/Password & other authentication flows.
+ Improve error handling and messaging for login failures.
+ Add tests for authentication flows.
+ Implement password-based authentication as an option.
+ Enhance the UI with custom themes.
+ Set up CI/CD for automatic deployment.
+ Write documentation for additional configuration options.
+ 
 ## Contributing
 
 We welcome contributions to improve this Firebase Auth Starter. If you would like to contribute, please follow these steps:
