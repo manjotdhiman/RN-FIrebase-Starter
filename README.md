@@ -1,3 +1,5 @@
+[![CI](https://github.com/manjotdhiman/RN-Firebase-Starter/actions/workflows/ci.yml/badge.svg)](https://github.com/manjotdhiman/RN-Firebase-Starter/actions/workflows/ci.yml)
+
 # Firebase Auth Starter with React Native
 
 This is a starter template for authentication in a React Native application using Firebase. It includes phone number authentication and OTP verification, making it a great starting point for building apps that require secure and scalable user authentication.
