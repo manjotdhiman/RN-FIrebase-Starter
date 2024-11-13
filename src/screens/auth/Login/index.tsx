@@ -1,27 +1,30 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   View,
   Text,
-  Button,
   TextInput,
   StyleSheet,
   TouchableOpacity,
 } from 'react-native';
 import auth from '@react-native-firebase/auth';
-import {FirebaseAuthTypes} from '@react-native-firebase/auth';
-import {state} from '../../../state';
+import { FirebaseAuthTypes } from '@react-native-firebase/auth';
+import { state } from '../../../state';
 
 type ConfirmationResult = FirebaseAuthTypes.ConfirmationResult;
-
-export default function LoginScreen() {
+type User = FirebaseAuthTypes.User;
+/*************  ✨ Codeium Command ⭐  *************/
+/**
+ * Screen for logging in with a phone number.
+ * @returns {JSX.Element} JSX element for the login screen.
+ */
+/******  b6117b0b-2e82-4041-9050-fcd568672d79  *******/ export default function LoginScreen() {
   const [confirm, setConfirm] = useState<ConfirmationResult | null>(null);
   const [phoneNumber, setPhoneNumber] = useState('');
   const [code, setCode] = useState('');
 
-  function onAuthStateChanged(user: any) {
+  function onAuthStateChanged(user: User | null) {
     if (user) {
-      console.log('User logged in:', user);
-      state.user.updateUser({id: user.uid, name: user.displayName});
+      state.user.updateUser({ id: user.uid, name: user.displayName ?? '' });
     }
   }
 
@@ -39,7 +42,7 @@ export default function LoginScreen() {
     try {
       await confirm?.confirm(code);
     } catch (error) {
-      console.log('Invalid code.');
+      console.error(error);
     }
   }
 
@@ -49,14 +52,15 @@ export default function LoginScreen() {
         <Text style={styles.title}>Login with Phone Number</Text>
         <TextInput
           style={styles.input}
-          placeholder="Enter phone number"
-          keyboardType="phone-pad"
+          placeholder='Enter phone number'
+          keyboardType='phone-pad'
           value={phoneNumber}
-          onChangeText={text => setPhoneNumber(text)}
+          onChangeText={(text) => setPhoneNumber(text)}
         />
         <TouchableOpacity
           style={styles.button}
-          onPress={() => signInWithPhoneNumber(phoneNumber)}>
+          onPress={() => signInWithPhoneNumber(phoneNumber)}
+        >
           <Text style={styles.buttonText}>Send OTP</Text>
         </TouchableOpacity>
       </View>
@@ -68,10 +72,10 @@ export default function LoginScreen() {
       <Text style={styles.title}>Enter OTP</Text>
       <TextInput
         style={styles.input}
-        placeholder="Enter OTP"
-        keyboardType="number-pad"
+        placeholder='Enter OTP'
+        keyboardType='number-pad'
         value={code}
-        onChangeText={text => setCode(text)}
+        onChangeText={(text) => setCode(text)}
       />
       <TouchableOpacity style={styles.button} onPress={() => confirmCode()}>
         <Text style={styles.buttonText}>Confirm Code</Text>
