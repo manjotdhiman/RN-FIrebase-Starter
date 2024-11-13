@@ -1,7 +1,7 @@
 import React from 'react';
-import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import auth from '@react-native-firebase/auth';
-import {updateUser} from '../../../state/user';
+import { updateUser } from '../../../state/user';
 
 const HomeScreen = () => {
   const handleLogout = () => {
@@ -9,15 +9,17 @@ const HomeScreen = () => {
       .signOut()
       .then(() => {
         updateUser(null);
+
         console.log('User signed out!');
       })
-      .catch(error => console.log('Error signing out: ', error));
+
+      .catch((error) => console.log('Error signing out: ', error));
   };
 
   return (
     <View style={styles.container}>
       <Text style={styles.welcomeText}>Welcome to the Home Screen</Text>
-      <Text style={styles.infoText}>You're now logged in!</Text>
+      <Text style={styles.infoText}>You&apos;re now logged in!</Text>
 
       <TouchableOpacity style={styles.logoutButton} onPress={handleLogout}>
         <Text style={styles.logoutButtonText}>Logout</Text>
