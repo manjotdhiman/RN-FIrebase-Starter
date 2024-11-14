@@ -71,8 +71,8 @@ firebase-auth-starter-react-native/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/firebase-auth-starter-react-native.git
-cd firebase-auth-starter-react-native
+git clone https://github.com/manjotdhiman/RN-FIrebase-Starter.git
+cd RN0Firebase-Starter
 ```
 
 ### 2. Install Dependencies
