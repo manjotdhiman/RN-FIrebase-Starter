@@ -132,8 +132,8 @@ We welcome contributions to improve this Firebase Auth Starter. If you would lik
 1. **Fork the Repository**: Click the "Fork" button on the top right of this page.
 2. **Clone the Fork**: Clone your fork to your local machine.
    ```bash
-   git clone https://github.com/yourusername/firebase-auth-starter-react-native.git
-   cd firebase-auth-starter-react-native
+   git clone https://github.com/manjotdhiman/RN-FIrebase-Starter.git
+   cd RN-Firebase-Starter
    ```
 3. **Create a Branch**: Create a new branch for your changes.
    ```bash
