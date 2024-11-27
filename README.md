@@ -1,3 +1,5 @@
+[![CI](https://github.com/manjotdhiman/RN-Firebase-Starter/actions/workflows/ci.yml/badge.svg)](https://github.com/manjotdhiman/RN-Firebase-Starter/actions/workflows/ci.yml)
+
 # Firebase Auth Starter with React Native
 
 This is a starter template for authentication in a React Native application using Firebase. It includes phone number authentication and OTP verification, making it a great starting point for building apps that require secure and scalable user authentication.
@@ -69,8 +71,8 @@ firebase-auth-starter-react-native/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/firebase-auth-starter-react-native.git
-cd firebase-auth-starter-react-native
+git clone https://github.com/manjotdhiman/RN-FIrebase-Starter.git
+cd RN0Firebase-Starter
 ```
 
 ### 2. Install Dependencies
@@ -113,6 +115,16 @@ npx react-native run-ios
 - **Login**: The `LoginScreen` in `src/screens/auth/Login` allows users to sign in with a phone number and OTP.
 - **Home**: After logging in, users are navigated to the `HomeScreen` in `src/screens/dashboard/home`, where they can see a welcome message and use the `Logout` button to sign out.
 
+
+## TODO
+ Add User/Password & other authentication flows.
+ Improve error handling and messaging for login failures.
+ Add tests for authentication flows.
+ Implement password-based authentication as an option.
+ Enhance the UI with custom themes.
+ Set up CI/CD for automatic deployment.
+ Write documentation for additional configuration options.
+ 
 ## Contributing
 
 We welcome contributions to improve this Firebase Auth Starter. If you would like to contribute, please follow these steps:
@@ -120,8 +132,8 @@ We welcome contributions to improve this Firebase Auth Starter. If you would lik
 1. **Fork the Repository**: Click the "Fork" button on the top right of this page.
 2. **Clone the Fork**: Clone your fork to your local machine.
    ```bash
-   git clone https://github.com/yourusername/firebase-auth-starter-react-native.git
-   cd firebase-auth-starter-react-native
+   git clone https://github.com/manjotdhiman/RN-FIrebase-Starter.git
+   cd RN-Firebase-Starter
    ```
 3. **Create a Branch**: Create a new branch for your changes.
    ```bash
