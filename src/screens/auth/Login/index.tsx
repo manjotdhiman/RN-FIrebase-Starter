@@ -12,7 +12,7 @@ import { state } from '../../../state';
 
 type ConfirmationResult = FirebaseAuthTypes.ConfirmationResult;
 type User = FirebaseAuthTypes.User;
-/*************  ✨ Codeium Command ⭐  *************/
+
 /**
  * Screen for logging in with a phone number.
  * @returns {JSX.Element} JSX element for the login screen.
